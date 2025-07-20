@@ -2,17 +2,14 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJs 24' // Jenkins tool name for Node.js
+        nodejs 'NodeJs 24'  // ✅ Must match exactly what you configured
     }
 
     stages {
-        stage('Clone Repo') {
+        stage('Manual Clone Repo') {
             steps {
-stage('Clone Repo') {
-  steps {
-    sh 'git clone https://github.com/sakshipahwa/playwright-automation.git .'
-  }
-}
+                // Cloning into current workspace (.)
+                sh 'git clone https://github.com/sachinjaiya/playwrightTest.git .'
             }
         }
 
@@ -22,7 +19,7 @@ stage('Clone Repo') {
             }
         }
 
-        stage('Install Browsers') {
+        stage('Install Playwright Browsers') {
             steps {
                 sh 'npx playwright install --with-deps'
             }
