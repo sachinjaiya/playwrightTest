@@ -9,6 +9,8 @@ pipeline {
         stage('Manual Clone Repo') {
             steps {
                 // Cloning into current workspace (.)
+                        deleteDir()
+
                 sh 'git clone https://github.com/sachinjaiya/playwrightTest.git .'
             }
         }
