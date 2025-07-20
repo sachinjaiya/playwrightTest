@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJs 24'  // ✅ Must match exactly what you configured
+        nodejs 'NodeJs24'  // ✅ Must match exactly what you configured
     }
 
     stages {
