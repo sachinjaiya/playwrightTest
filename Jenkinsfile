@@ -8,7 +8,11 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/sachinjaiya/playwrightTest.git'
+stage('Clone Repo') {
+  steps {
+    sh 'git clone https://github.com/sakshipahwa/playwright-automation.git .'
+  }
+}
             }
         }
 
