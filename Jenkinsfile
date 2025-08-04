@@ -26,7 +26,11 @@ pipeline {
                 sh 'npx playwright install --with-deps'
             }
         }
-
+        stage('install faker') {
+            steps {
+                sh 'npm install @faker-js/faker'
+            }
+        }
         stage('Run Tests') {
             steps {
                 sh 'npx playwright test'
